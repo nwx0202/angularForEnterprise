@@ -1,14 +1,14 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav>
+  <mat-sidenav #sidenav mode="side">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 
   <div class="site">
     <header>
-      <app-header></app-header>
+      <app-header (toggle)="sidenav.toggle()"></app-header>
     </header>
     <main>
-      <button (click)="sidenav.open()">打开</button>
+      <!-- <button (click)="sidenav.toggle()">打开</button> -->
     </main>
     <footer>
       <app-footer></app-footer>
