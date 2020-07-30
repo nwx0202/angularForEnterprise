@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,12 @@ export class AppComponent {
   title = 'taskmgr';
   darkTheme: boolean = false;
 
+  constructor(
+    private oc: OverlayContainer
+  ) { }
+
   switchTheme(event) {
-    console.log(event.checked);
     this.darkTheme = event.checked;
+    this.oc.getContainerElement().classList.add(this.darkTheme ? 'myapp-dark-theme' : null);
   }
 }

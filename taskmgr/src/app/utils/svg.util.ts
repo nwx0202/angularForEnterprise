@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export const loadSvgResources = (ir: MatIconRegistry, ds: DomSanitizer) => {
   const sidebarPath = `/assets/sidebar`;
   const dayDir = `/assets/days`;
+  const iconDir = `/assets/icons`;
   const days = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     11, 12, 13, 14, 15, 16, 17, 18,19, 20,
@@ -21,4 +22,7 @@ export const loadSvgResources = (ir: MatIconRegistry, ds: DomSanitizer) => {
   days.forEach(day => {
     ir.addSvgIcon(`day${day}`, ds.bypassSecurityTrustResourceUrl(`${dayDir}/day${day}.svg`));
   });
+  ir.addSvgIcon('move', ds.bypassSecurityTrustResourceUrl(`${iconDir}/move.svg`));
+  ir.addSvgIcon('add', ds.bypassSecurityTrustResourceUrl(`${iconDir}/add.svg`));
+  ir.addSvgIcon('delete', ds.bypassSecurityTrustResourceUrl(`${iconDir}/delete.svg`));
 }
