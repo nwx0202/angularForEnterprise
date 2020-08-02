@@ -3,8 +3,9 @@
   [item]="project"
   class="card"
   (onInvite)="launchInviteDialog()"
+  (onEdit)="launchEditDialog()"
+  (onDel)="launchDelDialog()"
 >
-
 </app-project-item>
 
 <button class="fab-button" mat-fab type="button" (click)="openNewProjectDialog()">

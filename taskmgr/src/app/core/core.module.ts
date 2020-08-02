@@ -10,6 +10,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { loadSvgResources } from '../utils/svg.util';
 import { SharedModule } from '../shared/shared.module';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   imports: [

@@ -8,6 +8,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
+  title = '';
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data,
@@ -16,6 +17,7 @@ export class NewProjectComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.data);
+    this.title = this.data.title;
   }
 
   onclick() {

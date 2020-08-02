@@ -18,9 +18,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ConfirmDialogComponent],
+  entryComponents: [ConfirmDialogComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
