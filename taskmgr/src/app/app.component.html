@@ -1,6 +1,6 @@
 <mat-sidenav-container [class.myapp-dark-theme]="darkTheme">
   <mat-sidenav #sidenav mode="over">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (navClick)="sidenav.toggle()"></app-sidebar>
   </mat-sidenav>
 
   <div class="site">
@@ -10,7 +10,7 @@
     <main>
       <router-outlet></router-outlet>
       <router-outlet></router-outlet>
-      <button (click)="sidenav.toggle()">打开</button>
+      <!-- <button (click)="sidenav.toggle()">打开</button> -->
       <!-- <div class="square" [@square]="squareState" (click)="onclick()"></div> -->
     </main>
     <footer>
