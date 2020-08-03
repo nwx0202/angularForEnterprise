@@ -8,12 +8,10 @@
       <app-header (toggle)="sidenav.toggle()" (toggleDarkTheme)="switchTheme($event)"></app-header>
     </header>
     <main>
-      <!-- <router-outlet></router-outlet> -->
-      <!-- <router-outlet></router-outlet> -->
-      <!-- <button (click)="sidenav.toggle()">打开</button> -->
-      <div class="square" [@square]="squareState" (click)="onclick()">
-
-      </div>
+      <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
+      <button (click)="sidenav.toggle()">打开</button>
+      <!-- <div class="square" [@square]="squareState" (click)="onclick()"></div> -->
     </main>
     <footer>
       <app-footer></app-footer>
