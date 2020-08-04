@@ -1,0 +1,17 @@
+<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f, $event)">
+  <mat-form-field class="full-width">
+    <input matInput type="text" placeholder="在这里快速建立一个任务" [(ngModel)]="desc" name="desc">
+    <button matSuffix mat-icon-button type="submit">
+      <mat-icon>send</mat-icon>
+    </button>
+    <mat-error>不能为空哦</mat-error>
+  </mat-form-field>
+</form> -->
+
+<mat-form-field class="full-width">
+  <input matInput type="text" placeholder="在这里快速建立一个任务" [(ngModel)]="desc">
+  <button matSuffix mat-icon-button type="button" (click)="sendQuickTask()">
+    <mat-icon>send</mat-icon>
+  </button>
+</mat-form-field>
+

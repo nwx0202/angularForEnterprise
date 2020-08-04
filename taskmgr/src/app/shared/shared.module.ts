@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,12 +21,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DirectiveModule } from 'src/app/directive/directive.module';
+// import {} from '@angular/material/error';
 
 @NgModule({
   declarations: [ConfirmDialogComponent],
   entryComponents: [ConfirmDialogComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -48,6 +52,8 @@ import { DirectiveModule } from 'src/app/directive/directive.module';
   ],
   exports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -66,7 +72,8 @@ import { DirectiveModule } from 'src/app/directive/directive.module';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    DirectiveModule
+    DirectiveModule,
+    
   ]
 })
 export class SharedModule { }
