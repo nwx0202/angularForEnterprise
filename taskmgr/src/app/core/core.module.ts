@@ -12,7 +12,8 @@ import { loadSvgResources } from '../utils/svg.util';
 import { SharedModule } from '../shared/shared.module';
 
 import 'hammerjs';
-import 'rxjs/add/operator/take';
+// import 'rxjs/add/operator/take';
+import 'rxjs-compat/add/operator/take'
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
