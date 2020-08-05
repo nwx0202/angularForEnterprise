@@ -21,10 +21,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DirectiveModule } from 'src/app/directive/directive.module';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 // import {} from '@angular/material/error';
 
 @NgModule({
-  declarations: [ConfirmDialogComponent],
+  declarations: [ConfirmDialogComponent, ImageListSelectComponent],
   entryComponents: [ConfirmDialogComponent],
   imports: [
     CommonModule,
@@ -73,6 +74,7 @@ import { DirectiveModule } from 'src/app/directive/directive.module';
     MatNativeDateModule,
     MatSelectModule,
     DirectiveModule,
+    ImageListSelectComponent
     
   ]
 })
