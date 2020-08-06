@@ -10,10 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { loadSvgResources } from '../utils/svg.util';
 import { SharedModule } from '../shared/shared.module';
+import { ServicesModule } from '../services/services.module';
 
 import 'hammerjs';
 // import 'rxjs/add/operator/take';
 import 'rxjs-compat/add/operator/take'
+import 'rxjs-compat/add/operator/map'
+import 'rxjs/add/operator/map'
+// import 'rxjs/add/operator/mergeMap'
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
@@ -21,13 +25,22 @@ import 'rxjs-compat/add/operator/take'
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServicesModule.forRoot()
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AppRoutingModule
+    AppRoutingModule,
+  ],
+  providers: [
+    {
+      provide: 'BASE_CONFIG',
+      useValue: {
+        uri: 'http://localhost:3000'
+      }
+    }
   ]
 })
 export class CoreModule {

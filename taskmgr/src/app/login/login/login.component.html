@@ -23,12 +23,12 @@
     <mat-card-header>
       <mat-card-title>每日佳句</mat-card-title>
       <mat-card-subtitle>
-        满足感在于不断地努力，而不是现有的成就。全心努力终会胜利。
+        {{quote.cn}}
       </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/quote_fallback.jpg">
+    <img mat-card-image [src]="quote.pic">
     <mat-card-content>
-
+      {{quote.en}}
     </mat-card-content>
   </mat-card>
 </form>
