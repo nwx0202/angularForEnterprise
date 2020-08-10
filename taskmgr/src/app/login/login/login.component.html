@@ -23,12 +23,12 @@
     <mat-card-header>
       <mat-card-title>每日佳句</mat-card-title>
       <mat-card-subtitle>
-        {{quote.cn}}
+        {{quote?.cn}}
       </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="quote.pic">
+    <img mat-card-image [src]="quote?.pic">
     <mat-card-content>
-      {{quote.en}}
+      {{quote?.en}}
     </mat-card-content>
   </mat-card>
 </form>

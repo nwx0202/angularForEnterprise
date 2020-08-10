@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
     private quoteService$: QuoteService
   ) {
     this.quoteService$.getQuote().subscribe(q => {
-      console.log(q);
-      this.quote = q
+      this.quote = q;
     });
   }
 

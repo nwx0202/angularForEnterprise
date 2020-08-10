@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs-compat/Observable';
 import { Quote } from '../domain/quote.module';
 
 @Injectable()
@@ -12,7 +12,9 @@ export class QuoteService {
 
   getQuote(): Observable<Quote> {
     const uri = `${this.config.uri}/quotes/${Math.floor(Math.random() * 10)}`;
-    return this.http.get(uri).map(res => {
+    return this.http.get(uri)
+    // .debug('quote: ')
+    .map(res => {
       return res as Quote;
     });
   }

@@ -13,11 +13,11 @@ import { SharedModule } from '../shared/shared.module';
 import { ServicesModule } from '../services/services.module';
 
 import 'hammerjs';
-// import 'rxjs/add/operator/take';
 import 'rxjs-compat/add/operator/take'
 import 'rxjs-compat/add/operator/map'
 import 'rxjs/add/operator/map'
-// import 'rxjs/add/operator/mergeMap'
+
+import '../utils/debug.util';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
