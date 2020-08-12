@@ -17,7 +17,7 @@ import 'rxjs-compat/add/operator/take'
 import 'rxjs-compat/add/operator/map'
 import 'rxjs/add/operator/map'
 
-import '../utils/debug.util';
+// import '../utils/debug.util';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
