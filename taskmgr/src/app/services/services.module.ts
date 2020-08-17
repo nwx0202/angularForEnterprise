@@ -1,5 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { QuoteService } from './quote.service';
+import { ProjectService } from './project.service';
+import { TaksListService } from './task-list.service';
 
 // export {
 //   QuoteService
@@ -11,7 +13,9 @@ export class ServicesModule {
     return {
       ngModule: ServicesModule,
       providers: [
-        QuoteService
+        QuoteService,
+        ProjectService,
+        TaksListService
       ]
     }
   }
