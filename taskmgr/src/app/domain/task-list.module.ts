@@ -3,4 +3,5 @@ export interface TaskList {
   name: string;
   taskIds: string[];
   projectId: string;
+  order: number;
 }
